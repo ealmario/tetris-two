@@ -1,0 +1,17 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "Vanilla JavaScript Tetris Game 2.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tetris",
+    "vanilla",
+    "javascript",
+    "game"
+  ],
+  "author": "Eli Almario",
+  "license": "ISC"
+}
