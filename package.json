@@ -4,7 +4,7 @@
   "description": "Vanilla JavaScript Tetris Game 2.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "tetris",
@@ -13,5 +13,9 @@
     "game"
   ],
   "author": "Eli Almario",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://ealmario.github.io/tetris-two",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
