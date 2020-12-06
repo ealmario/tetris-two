@@ -2,12 +2,9 @@
 class Piece {
   constructor(ctx) {
     this.ctx = ctx;
-    this.color = 'blue';
-    this.shape = [
-      [2,0,0],
-      [2,2,2],
-      [0,0,0]
-    ]
+    this.typeId = this.randomizeTetrominoType(COLORS.length);
+    this.shape = SHAPES[this.typeId];
+    this.color = COLORS[this.typeId];
 
     // Starting position
     // Left upper position of the shape
@@ -33,5 +30,10 @@ class Piece {
   move(p) {
     this.x = p.x;
     this.y = p.y;
+  }
+
+  randomizeTetrominoType(noOfTypes) {
+    const random = Math.floor(Math.random() * noOfTypes);
+    return random;
   }
 }

@@ -17,6 +17,7 @@ const KEY = {
 Object.freeze(KEY);
 
 // Colors
+// Color and shape has to correspond
 const COLORS = [
   '#a3eded', //cyan
   '#4f85da', //blue
