@@ -24,7 +24,8 @@ const moves = {
   [KEY.LEFT]: p => ({...p, x: p.x - 1}),
   [KEY.RIGHT]: p => ({...p, x: p.x + 1}),
   [KEY.DOWN]: p => ({...p, y: p.y + 1}),
-  [KEY.SPACE]: p => ({...p, y: p.y + 1})
+  [KEY.SPACE]: p => ({...p, y: p.y + 1}),
+  // [KEY.UP]: p => board.rotate(p)
 }
 
 // const p = this.moves[event.key](this.piece);
@@ -33,7 +34,6 @@ const moves = {
 document.addEventListener('keydown', event => {
   if (moves[event.keyCode]) {
     event.preventDefault();
-
     // Get new state
     let p = moves[event.keyCode](board.piece);
     if (event.keyCode === KEY.SPACE) {
@@ -41,7 +41,7 @@ document.addEventListener('keydown', event => {
       while (board.valid(p)) {
         board.piece.move(p);
         p = moves[KEY.DOWN](board.piece);
-      }      
+      }       
     } else if (board.valid(p)) {
       board.piece.move(p);
     }
